@@ -274,53 +274,47 @@ URLs الخاصة بك:
 
 ---
 
-# 🌟 الخيار الثالث: Netlify (Frontend) + Render (Backend)
+## 🌟 الخيار الثالث: Render (Frontend + Backend)
 
-## رفع Frontend على Netlify
-
-### الطريقة الأولى: Drag & Drop (الأسهل)
+### رفع Frontend على Render (Static Site)
 
 1. **ابنِ المشروع محلياً**:
    ```bash
    npm run build
    ```
 
-2. **اذهب إلى** https://netlify.com
+2. **اذهب إلى** https://render.com
 
 3. **سجل الدخول** أو أنشئ حساب
 
-4. **اسحب وأفلت**:
-   - اسحب مجلد `build` إلى منطقة Drop في Netlify
-   - سيُرفع المشروع تلقائياً
+4. **أنشئ Static Site جديد**:
+   - اضغط **New +** → **Static Site**
+   - صِل حساب GitHub واختر هذا المستودع
+   - إعدادات البناء:
+     - **Build Command**: `npm ci && npm run build`
+     - **Publish Directory**: `build`
+   - اضبط الفرع `main`
 
-5. **إضافة Environment Variables**:
-   - اذهب إلى **"Site settings"**
-   - **"Environment variables"**
-   - أضف `VITE_API_URL`
+5. **Environment Variables**:
+   - في إعدادات الموقع أضف `VITE_API_URL`
 
-6. **أعد البناء**:
-   - انقر على **"Deploys"**
-   - **"Trigger deploy"**
+6. **أنشئ الموقع (Create Static Site)**
 
-### الطريقة الثانية: من GitHub
+### رفع Backend على Render (Web Service)
 
-1. **من Dashboard**:
-   - انقر على **"Add new site"**
-   - **"Import an existing project"**
+1. **اضغط New +** → **Web Service**
+2. **صِل GitHub** واختر نفس المستودع
+3. **الإعدادات**:
+   - **Name**: afiya-zone-backend
+   - **Root Directory**: `server`
+   - **Environment**: `Node`
+   - **Build Command**: `cd server && npm ci`
+   - **Start Command**: `npm start`
+4. **Environment Variables**:
+   - أضف `MONGODB_URI`, `JWT_SECRET`, `NODE_ENV=production`
+5. **Create Web Service**
 
-2. **اختر GitHub**:
-   - صل repository
-
-3. **إعدادات**:
-   ```
-   Build command: npm run build
-   Publish directory: build
-   ```
-
-4. **Environment variables**:
-   - أضف `VITE_API_URL`
-
-5. **Deploy**
+بعد اكتمال النشر، حدّث قيمة `VITE_API_URL` على إعدادات Frontend في Render لتشير إلى رابط الـ backend (مثال: `https://afiya-zone-backend.onrender.com/api`).
 
 ---
 

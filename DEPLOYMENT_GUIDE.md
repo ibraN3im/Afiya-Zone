@@ -203,14 +203,9 @@ Your frontend will be available at: `https://afiya-zone.onrender.com`
 6. Deploy
 
 **Pros**:
-- ✅ Vercel: Lightning fast, excellent DX
-- ✅ Railway: Great for Node.js apps
-- ✅ Free SSL
 
 **Cons**:
-- ⚠️ Railway free tier has limits
 
----
 
 ### Option 3: **Netlify** (Frontend) + **Render** (Backend)
 
@@ -220,7 +215,15 @@ Your frontend will be available at: `https://afiya-zone.onrender.com`
 3. Configure build settings:
    - **Build Command**: `npm run build`
    - **Publish Directory**: build
-4. Add Environment Variables in Site Settings
+### Option 3: **Render** (Frontend) + **Render** (Backend)
+#### Frontend on Render (Static Site):
+1. **Create account** at [Render.com](https://render.com)
+2. Click **New +** → **Static Site** and connect your GitHub repository
+3. Configure:
+    - **Build Command**: `npm ci && npm run build`
+    - **Publish Directory**: `build`
+4. Add Environment Variables in Site Settings (e.g., `VITE_API_URL`)
+5. Create the static site and wait for the deploy to finish
 
 **Pros**:
 - ✅ Super easy deployment

@@ -216,7 +216,7 @@ HOSTING_GUIDE_AR.md
 يشرح بالتفصيل:
 - ✅ **Render** - الأسهل للمبتدئين (موصى به)
 - ✅ **Vercel + Railway** - للمحترفين
-- ✅ **Netlify + Render**
+- ✅ **Render (Frontend + Backend)**
 - ✅ مقارنة بين جميع الخيارات
 
 **كل الخيارات مجانية 100%!**
