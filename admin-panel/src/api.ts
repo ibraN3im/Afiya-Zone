@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://afiya-server-w6vn.onrender.com/api';
 
 const getAuthToken = () => localStorage.getItem('adminToken');
 
