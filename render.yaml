@@ -3,7 +3,7 @@
 
 staticSites:
   - name: afiya-zone-frontend
-    repo: https://github.com/ibraN3im/afiya-zone-ecommerce
+    repo: https://github.com/ibraN3im/Afiya-Zone
     branch: main
     buildCommand: npm ci && npm run build
     publishPath: build
@@ -13,7 +13,7 @@ staticSites:
 services:
   - type: web
     name: afiya-zone-backend
-    repo: https://github.com/ibraN3im/afiya-zone-ecommerce
+    repo: https://github.com/ibraN3im/Afiya-Zone
     branch: main
     env: node
     plan: free
